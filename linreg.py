@@ -29,9 +29,9 @@ Anoise = A
 Bnoise = B + np.random.uniform(-1,1,B.shape)
 
 #plotting
-plt.plot(A,B,'o-')
-plt.plot(Anoise,Bnoise,'o')
-plt.show()
+#plt.plot(A,B,'o-')
+#plt.plot(Anoise,Bnoise,'o')
+#plt.show()
 
 
 Amatrix = np.ones((Anoise.shape[0],1))
@@ -39,17 +39,13 @@ for i in range (0,3):
     #Amatrix = np.append(A**(i+1), Amatrix, axis=1)
     Amatrix = np.append(Anoise**(i+1), Amatrix, axis=1)
 #print(Amatrix)
-print(Amatrix)
 
 #plotting
 #plt.plot(A,B,'o-')
 #plt.plot(A,Bnoise,'o')
 #plt.show()
-#LR = 0.000000000001
 LR = 0.001
-#delta = 0.01*(sum(abs(Anoise)))
 delta = 1
-#x = np.ones(4)
 x = [0,0,0,0]
 
 gradnorm = delta+1
