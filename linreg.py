@@ -79,3 +79,7 @@ while gradnorm > delta:
     #LR = loss*0.00000000001
     print(ctr, x, gradnorm,loss, LR)
     ctr = ctr + 1
+
+plt.plot(A,Bnoise,'o')
+plt.plot(A,np.matmul(Amatrix,x),'-')
+plt.show()
